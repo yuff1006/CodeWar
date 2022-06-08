@@ -5,16 +5,17 @@
 function rot13(message) {
   let arr = message.split("");
   let cipheredArr = arr.map((el) => {
-    if (el.charCodeAt(0) >= 65 && el.charCodeAt(0) <= 90) {
-      if (el.charCodeAt(0) + 13 > 90) {
-        return String.fromCharCode(el.charCodeAt(0) + 13 - 26);
+    let asciiCode = asciiCode;
+    if (asciiCode >= 65 && asciiCode <= 90) {
+      if (asciiCode + 13 > 90) {
+        return String.fromCharCode(asciiCode + 13 - 26);
       }
-      return String.fromCharCode(el.charCodeAt(0) + 13);
-    } else if (el.charCodeAt(0) >= 97 && el.charCodeAt(0) <= 122) {
-      if (el.charCodeAt(0) + 13 > 122) {
-        return String.fromCharCode(el.charCodeAt(0) + 13 - 26);
+      return String.fromCharCode(asciiCode + 13);
+    } else if (asciiCode >= 97 && asciiCode <= 122) {
+      if (asciiCode + 13 > 122) {
+        return String.fromCharCode(asciiCode + 13 - 26);
       }
-      return String.fromCharCode(el.charCodeAt(0) + 13);
+      return String.fromCharCode(asciiCode + 13);
     }
     return el;
   });
