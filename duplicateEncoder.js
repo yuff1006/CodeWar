@@ -11,7 +11,6 @@
 // Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 
 function duplicateEncode(word) {
-  let newArr = [];
   word = word.toLowerCase();
   const arr = word.split('');
   for (let i = 0; i < arr.length; i++) {
